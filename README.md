@@ -15,7 +15,7 @@ Sigue estos pasos para instalar y preparar Nmap-Excel:
 
 1. **Clona el Repositorio**:
     ```bash
-    git clone https://github.com/tu-usuario/nmap-excel.git
+    git clone https://github.com/crystalhawkXXX/nmap-excel.git
     cd nmap-excel
     ```
 
