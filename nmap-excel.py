@@ -40,8 +40,10 @@ def run_nmap(ip_or_domain):
     # Usar subprocess para ejecutar el comando de manera compatible
     try:
         result = subprocess.run(command, shell=True, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        print(result.stdout.decode())
-        print(result.stderr.decode())
+        encoding = 'latin-1' if platform.system() == 'Windows' else 'utf-8'
+        print(result.stdout.decode(encoding))
+        print(result.stderr.decode(encoding))
+
     except subprocess.CalledProcessError as e:
         print(f"Error ejecutando nmap: {e}")
         sys.exit(1)
